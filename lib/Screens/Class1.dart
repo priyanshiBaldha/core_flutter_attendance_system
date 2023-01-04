@@ -1,0 +1,279 @@
+import 'package:attendance_system/Model/Global.dart';
+import 'package:flutter/material.dart';
+
+class Class1 extends StatefulWidget {
+  const Class1({Key? key}) : super(key: key);
+
+  @override
+  State<Class1> createState() => _Class1State();
+}
+
+class _Class1State extends State<Class1> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: InkWell(
+            onTap: () {
+              setState(() {
+                Navigator.pop(context);
+              });
+            },
+            child: Icon(
+              Icons.arrow_back_ios_new_sharp,
+              color: Colors.black,
+            )),
+        title: Text(
+          "Class 1",
+          style: TextStyle(color: Colors.black, fontSize: 25),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.black12,
+        actions: [
+          IconButton(onPressed: (){
+            Navigator.pushNamed(context, 'pdf');
+          }, icon: Icon(Icons.picture_as_pdf_outlined,color: Colors.black,size: 30 ,))
+        ],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.only(right: 15.0, left: 15),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  height: 60,
+                  width: 300,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                      color: Colors.indigo.shade300,
+                      borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(15),
+                          bottomRight: Radius.circular(15))),
+                  child: Text(
+                    "Faculty Name: JAY GONDALIYA",
+                    style: TextStyle(color: Colors.black, fontSize: 18),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Container(
+              height: 70,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                color: Colors.black12,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Row(
+                children: [
+                  SizedBox(width: 10,),
+                  Text("1.",style: TextStyle(fontSize: 20),),
+                  Text(" Ishika Dhameliya",style: TextStyle(fontSize: 20),),
+                  SizedBox(width: 70,),
+                  IconButton(onPressed: (){
+                    setState(() {
+                      Global.click = true;
+                    });
+                  }, icon: Icon(Icons.check),color: Colors.green,),
+                  IconButton(onPressed: (){
+                    setState(() {
+                   Global.click = false;
+                    });
+                  }, icon: Icon(Icons.close_outlined),color: Colors.redAccent,),
+
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Container(
+              height: 70,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                color: Colors.black12,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Row(
+                children: [
+                  SizedBox(width: 10,),
+                  Text("2.",style: TextStyle(fontSize: 20),),
+                  Text(" Shrddha Gaudani ",style: TextStyle(fontSize: 20),),
+                  SizedBox(width: 70,),
+                  IconButton(onPressed: (){setState(() {
+                    Global.click2 = true;
+                  });}, icon: Icon(Icons.check),color: Colors.green,),
+                  IconButton(onPressed: (){setState(() {
+                    Global.click2 = false;
+                  });}, icon: Icon(Icons.close_outlined),color: Colors.redAccent,),
+
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Container(
+              height: 70,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                color: Colors.black12,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Row(
+                children: [
+                  SizedBox(width: 10,),
+                  Text("3.",style: TextStyle(fontSize: 20),),
+                  Text(" Krishna Navadiya",style: TextStyle(fontSize: 20),),
+                  SizedBox(width: 70,),
+                  IconButton(onPressed: (){setState(() {
+                    Global.click3 = true;
+                  });}, icon: Icon(Icons.check),color: Colors.green,),
+                  IconButton(onPressed: (){setState(() {
+                    Global.click3 = false;
+                  });}, icon: Icon(Icons.close_outlined),color: Colors.redAccent,),
+
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Container(
+              height: 70,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                color: Colors.black12,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Row(
+                children: [
+                  SizedBox(width: 10,),
+                  Text("4.",style: TextStyle(fontSize: 20),),
+                  Text(" Priyanshi Baldha",style: TextStyle(fontSize: 20),),
+                  SizedBox(width: 70,),
+                  IconButton(onPressed: (){setState(() {
+                    Global.click4 = true;
+                  });}, icon: Icon(Icons.check),color: Colors.green,),
+                  IconButton(onPressed: (){setState(() {
+                    Global.click4 = false;
+                  });}, icon: Icon(Icons.close_outlined),color: Colors.redAccent,),
+
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Container(
+              height: 70,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                color: Colors.black12,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Row(
+                children: [
+                  SizedBox(width: 10,),
+                  Text("5.",style: TextStyle(fontSize: 20),),
+                  Text(" Aakash Dungrani",style: TextStyle(fontSize: 20),),
+                  SizedBox(width: 70,),
+                  IconButton(onPressed: (){setState(() {
+                    Global.click5 = true;
+                  });}, icon: Icon(Icons.check),color: Colors.green,),
+                  IconButton(onPressed: (){setState(() {
+                    Global.click5 = false;
+                  });}, icon: Icon(Icons.close_outlined),color: Colors.redAccent,),
+
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Container(
+              height: 70,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                color: Colors.black12,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Row(
+                children: [
+                  SizedBox(width: 10,),
+                  Text("6.",style: TextStyle(fontSize: 20),),
+                  Text(" Arshit Vadsak",style: TextStyle(fontSize: 20),),
+                  SizedBox(width: 90,),
+                  IconButton(onPressed: (){setState(() {
+                    Global.click6 = true;
+                  });}, icon: Icon(Icons.check),color: Colors.green,),
+                  IconButton(onPressed: (){setState(() {
+                    Global.click6 = false;
+                  });}, icon: Icon(Icons.close_outlined),color: Colors.redAccent,),
+
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Container(
+              height: 70,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                color: Colors.black12,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Row(
+                children: [
+                  SizedBox(width: 10,),
+                  Text("7.",style: TextStyle(fontSize: 20),),
+                  Text(" Zeel Bharodiya",style: TextStyle(fontSize: 20),),
+                  SizedBox(width: 90,),
+                  IconButton(onPressed: (){setState(() {
+                    Global.click7 = true;
+                  });}, icon: Icon(Icons.check),color: Colors.green,),
+                  IconButton(onPressed: (){setState(() {
+                    Global.click7 = false;
+                  });}, icon: Icon(Icons.close_outlined),color: Colors.redAccent,),
+
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Container(
+              height: 70,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                color: Colors.black12,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Row(
+                children: [
+                  SizedBox(width: 10,),
+                  Text("8.",style: TextStyle(fontSize: 20),),
+                  Text(" Parth Dhameliya",style: TextStyle(fontSize: 20),),
+                  SizedBox(width: 70,),
+                  IconButton(onPressed: (){setState(() {
+                    Global.click8 = true;
+                  });}, icon: Icon(Icons.check),color: Colors.green,),
+                  IconButton(onPressed: (){setState(() {
+                    Global.click8 = false;
+                  });}, icon: Icon(Icons.close_outlined),color: Colors.redAccent,),
+
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+      backgroundColor: const Color(0xffFDEEDC),
+    );
+  }
+}
